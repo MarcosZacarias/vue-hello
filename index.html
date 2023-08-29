@@ -26,7 +26,17 @@
     <!-- DIV VUE.JS -->
     <div id="app" class="container">
       <h1>{{ message }}</h1>
-      <img :src="srcImg" alt="" class="mt-3" />
+      <p>Seleziona un numero dal 1 al 5</p>
+      <input
+        type="number"
+        name="quantity"
+        min="1"
+        max="5"
+        v-model="numberImg"
+        class="my-2"
+      />
+      <button @click="printImage()" class="btn btn-primary mx-2">Stampa</button>
+      <img :src="srcImg" alt="" :class="imgDisplay" class="my-3" />
     </div>
     <!-- SCRIPT BOOTSTRAP JAVASCRIPT -->
     <script
